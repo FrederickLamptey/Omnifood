@@ -40,19 +40,13 @@ body {
     color: #555;
 }
 
-.test {
-    /* max-width */
-    background-color: red;
-    padding: 100px;
-    /* width: 1000px; */
-    /* max-width: 1000px; */
+.hero {
+    max-width: 130rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-    /* rem is calculated based on the font size of the root element (html). By default, the size of the html is 16px 
-    but you can chage it. Hence, 1rem = 16px. Ideally, changing the html font size to 10px is advised
-    since it is easier to calculate the expected pc using rem.
-    */
-    max-width: 50rem;
-    padding: 4rem;
-    font-size: 2rem;
-    color: #fff;
+.hero-img {
+    width: 100%;
 }
