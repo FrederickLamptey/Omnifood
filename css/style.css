@@ -16,6 +16,17 @@ WHITESPACE
 */
 
 
+html {
+    
+    /* font-size: 10px;  Ideally but*/ 
+     /* 
+       10px / 16px = 0.625 = 62.5%
+       This is the percentage of user's browser font-size setting
+      */
+    font-size: 62.5%;
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -27,4 +38,21 @@ body {
     line-height: 1;
     font-weight: 400;
     color: #555;
+}
+
+.test {
+    /* max-width */
+    background-color: red;
+    padding: 100px;
+    /* width: 1000px; */
+    /* max-width: 1000px; */
+
+    /* rem is calculated based on the font size of the root element (html). By default, the size of the html is 16px 
+    but you can chage it. Hence, 1rem = 16px. Ideally, changing the html font size to 10px is advised
+    since it is easier to calculate the expected pc using rem.
+    */
+    max-width: 50rem;
+    padding: 4rem;
+    font-size: 2rem;
+    color: #fff;
 }
