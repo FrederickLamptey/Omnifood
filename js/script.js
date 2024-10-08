@@ -40,6 +40,28 @@ allLinks.forEach(function (link) {
   })
 })
 
+// Sticky naviagtion
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const obs = new IntersectionObserver(function (entries) {
+  const ent = entries[0];
+
+  if (ent.isIntersecting === false) {
+    document.body.classList.add("sticky");
+  }
+
+  if (ent.isIntersecting === true) {
+    document.body.classList.remove('sticky');
+  }
+}, {
+  // In the viewport
+  root: null,
+  threshold: 0,
+  rootMargin: "-80px" //'80px(8rem) is the real height of the header in the styles.css'
+})
+
+obs.observe(sectionHeroEl)
+
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
